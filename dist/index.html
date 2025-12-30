@@ -15,6 +15,24 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+<style>
+    /* Styling for Documentation Dropdown */
+    .dropdown-menu-dark {
+        background-color: #212529;
+        border: none;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.85rem;
+    }
+    .dropdown-item:hover {
+        background-color: #ffc800 !important; /* Theme Yellow */
+        color: #212529 !important;
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block; /* Shows on hover for desktop */
+    }
+</style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -33,6 +51,16 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDoc" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Documentation
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDoc">
+        <li><a class="dropdown-item" href="assets/EncryptaGuard_Whitepaper.pdf" target="_blank">Whitepaper</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item disabled" href="#">Setup Guide (Coming Soon)</a></li>
+    </ul>
+</li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                     </ul>
                 </div>
@@ -253,6 +281,20 @@
                     </div>
 
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Documentation Resource Section -->
+<section class="page-section bg-light" id="documentation">
+    <div class="container text-center">
+        <h2 class="section-heading text-uppercase">Documentation</h2>
+        <h3 class="section-subheading text-muted">Technical resources and downloads.</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-primary btn-xl text-uppercase" href="assets/EncryptaGuard_Whitepaper.pdf" target="_blank">
+                    <i class="fas fa-file-pdf me-2"></i> Download Whitepaper
+                </a>
             </div>
         </div>
     </div>
