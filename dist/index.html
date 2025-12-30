@@ -14,59 +14,61 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-<style>
-    /* 1. NAVBAR - Make it solid dark and visible immediately */
-    #mainNav {
-        background-color: #212529 !important; 
-        padding-top: 0.75rem !important;
-        padding-bottom: 0.75rem !important;
-        border-bottom: 1px solid #333;
-    }
+        <link href="css/styles.css" rel="stylesheet" />
 
-    /* 2. COLORS - Change all "Yellow" accents to "Steel Blue" */
-    .btn-primary {
-        background-color: #0056b3 !important; /* Professional Steel Blue */
-        border-color: #0056b3 !important;
-        color: #fff !important;
-    }
-    
-    .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-        background-color: #004494 !important;
-        border-color: #004494 !important;
-    }
+        <style>
+            /* 1. NAVBAR - Make it solid dark and visible immediately */
+            #mainNav {
+                background-color: #212529 !important; 
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+                border-bottom: 1px solid #333;
+            }
 
-    .text-primary {
-        color: #0056b3 !important;
-    }
+            /* 2. COLORS - Change all "Yellow" accents to "Steel Blue" */
+            .btn-primary {
+                background-color: #0056b3 !important; /* Professional Steel Blue */
+                border-color: #0056b3 !important;
+                color: #fff !important;
+            }
+            
+            .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+                background-color: #004494 !important;
+                border-color: #004494 !important;
+            }
 
-    /* 3. DOCUMENTATION DROPDOWN - Clean Slate look */
-    .dropdown-menu-dark {
-        background-color: #212529;
-        border: 1px solid #444;
-        border-radius: 0;
-        text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.85rem;
-    }
+            .text-primary {
+                color: #0056b3 !important;
+            }
 
-    .dropdown-item {
-        color: #ddd !important;
-        padding: 10px 20px;
-    }
+            /* 3. DOCUMENTATION DROPDOWN STYLING */
+            .dropdown-menu-dark {
+                background-color: #212529;
+                border: 1px solid #444;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.85rem;
+            }
 
-    .dropdown-item:hover {
-        background-color: #0056b3 !important; /* Blue hover instead of yellow */
-        color: #fff !important;
-    }
+            .dropdown-item {
+                color: #ddd !important;
+                padding: 10px 20px;
+            }
 
-    /* Desktop Hover Effect for Dropdown */
-    @media (min-width: 992px) {
-        .nav-item.dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0;
-        }
-    }
-</style>
+            .dropdown-item:hover {
+                background-color: #0056b3 !important; /* Blue hover */
+                color: #fff !important;
+            }
+
+            /* Desktop Hover Effect */
+            @media (min-width: 992px) {
+                .nav-item.dropdown:hover .dropdown-menu {
+                    display: block;
+                    margin-top: 0;
+                }
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
