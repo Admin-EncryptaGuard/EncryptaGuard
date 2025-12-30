@@ -14,23 +14,57 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
 <style>
-    /* Styling for Documentation Dropdown */
+    /* 1. NAVBAR - Make it solid dark and visible immediately */
+    #mainNav {
+        background-color: #212529 !important; 
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+        border-bottom: 1px solid #333;
+    }
+
+    /* 2. COLORS - Change all "Yellow" accents to "Steel Blue" */
+    .btn-primary {
+        background-color: #0056b3 !important; /* Professional Steel Blue */
+        border-color: #0056b3 !important;
+        color: #fff !important;
+    }
+    
+    .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+        background-color: #004494 !important;
+        border-color: #004494 !important;
+    }
+
+    .text-primary {
+        color: #0056b3 !important;
+    }
+
+    /* 3. DOCUMENTATION DROPDOWN - Clean Slate look */
     .dropdown-menu-dark {
         background-color: #212529;
-        border: none;
+        border: 1px solid #444;
         border-radius: 0;
         text-transform: uppercase;
-        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 0.85rem;
     }
-    .dropdown-item:hover {
-        background-color: #ffc800 !important; /* Theme Yellow */
-        color: #212529 !important;
+
+    .dropdown-item {
+        color: #ddd !important;
+        padding: 10px 20px;
     }
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block; /* Shows on hover for desktop */
+
+    .dropdown-item:hover {
+        background-color: #0056b3 !important; /* Blue hover instead of yellow */
+        color: #fff !important;
+    }
+
+    /* Desktop Hover Effect for Dropdown */
+    @media (min-width: 992px) {
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
     }
 </style>
     </head>
@@ -291,17 +325,16 @@
     <div class="container text-center">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Resource Center</h2>
-            <h3 class="section-subheading text-muted">Technical briefs and implementation guides for your network.</h3>
+            <h3 class="section-subheading text-muted">Technical briefs and implementation guides.</h3>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <span class="fa-stack fa-4x mb-4">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i> <!-- This will now be Blue -->
                     <i class="fas fa-file-pdf fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="my-3">Whitepaper</h4>
-                <p class="text-muted">A deep dive into our "Security Sandwich" architecture, bandwidth optimization metrics, and isolation logic.</p>
-                <!-- Since your PDF is in the same folder as index.html, we use the filename directly -->
+                <p class="text-muted">Explore the "Security Sandwich" architecture and our bandwidth optimization metrics.</p>
                 <a class="btn btn-primary btn-xl text-uppercase" href="EncryptaGuard_Whitepaper.pdf" target="_blank">
                     <i class="fas fa-download me-2"></i> Download PDF
                 </a>
