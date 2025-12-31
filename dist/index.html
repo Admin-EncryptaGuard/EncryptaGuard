@@ -68,6 +68,28 @@
                     margin-top: 0;
                 }
             }
+            /* Force Logo text to White and remove yellow hover */
+.navbar-brand {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #0056b3 !important; /* Changes to Steel Blue on hover instead of yellow */
+}
+
+/* Add a text shadow to the Masthead for better legibility */
+.masthead-heading, .masthead-subheading {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure Nav links don't turn yellow when active */
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0056b3 !important;
+}
         </style>
     </head>
     <body id="page-top">
@@ -138,8 +160,8 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-wifi fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Work From Anywhere</h4>
-                        <p class="text-muted">Access your security cameras and office files from your home or phone. We provide a military-grade encrypted tunnel that connects you to your business securely, no matter where you are.</p>
+                        <h4 class="my-3">Managed Resilience</h4>
+                        <p class="text-muted">You focus on your business; we focus on the hardware. We provide 24/7 remote monitoring and automated threat updates, ensuring your node is always hardened against the latest global vulnerabilities without you lifting a finger.</p>
                     </div>
                 </div>
             </div>
