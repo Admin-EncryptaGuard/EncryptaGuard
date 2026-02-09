@@ -86,23 +86,30 @@
 
             .btn-hero {
                 display: inline-block;
-                padding: 20px 40px; /* Large clickable area */
-                font-size: 1.5rem;   /* Bigger text */
-                font-weight: 700;    /* Bold text */
-                color: #ffffff;      /* Pure white text for readability */
-                background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Purple to Blue gradient */
-                border-radius: 50px; /* Rounded pill shape */
+                padding: 25px 60px !important; /* Massive clickable area */
+                font-size: 2rem !important;    /* 2x standard size */
+                font-weight: 900 !important;   /* Extra bold */
+                color: #ffffff !important;
+                background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
+                border-radius: 50px;
                 text-decoration: none;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
                 transition: all 0.3s ease;
-                box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3); /* Soft purple shadow */
+                box-shadow: 0 10px 30px rgba(106, 17, 203, 0.4);
+                animation: pulse 2s infinite; /* Attention-grabber */
             }
 
             .btn-hero:hover {
-                transform: translateY(-3px); /* Subtle lift on hover */
-                box-shadow: 0 15px 30px rgba(106, 17, 203, 0.5); /* Stronger shadow */
-                filter: brightness(1.1); /* Slight glow */
+                transform: scale(1.05) translateY(-5px) !important;
+                box-shadow: 0 20px 40px rgba(106, 17, 203, 0.6) !important;
+                filter: brightness(1.2);
+            }
+
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.7); }
+                70% { box-shadow: 0 0 0 20px rgba(106, 17, 203, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(106, 17, 203, 0); }
             }
         </style>
     </head>
@@ -196,7 +203,7 @@
         <a href="https://buy.stripe.com/28EdR8fSZ2aq5P10u02VG02" 
            target="_blank" 
            rel="noopener" 
-           class="btn-primary">
+           class="btn-hero">
            Secure my home
         </a>
     </div>
