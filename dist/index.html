@@ -79,9 +79,20 @@
                 text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
             }
 
-            .navbar-dark .navbar-nav .nav-link.active, 
-            .navbar-dark .navbar-nav .nav-link:hover {
-                color: #0056b3 !important;
+            /* 4. FAQ ACCORDION STYLING - FIXES THE YELLOW HIGHLIGHT & ARROWS */
+            .accordion-button:not(.collapsed) {
+                color: #fff !important;
+                background-color: #0056b3 !important;
+                box-shadow: none !important;
+            }
+
+            .accordion-button:focus {
+                border-color: #0056b3 !important;
+                box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.25) !important;
+            }
+
+            .accordion-button:not(.collapsed)::after {
+                filter: brightness(0) invert(1);
             }
         </style>
     </head>
@@ -105,7 +116,7 @@
                         
                         <li class="nav-item d-none d-lg-flex align-items-center">
                             <span class="text-white small ms-lg-3" style="text-transform: none; white-space: nowrap;">
-                                Expert Support:
+                                Questions?:
                                 <a href="tel:628-240-0845" class="text-primary fw-bold text-decoration-none ms-1">628-240-0845</a>
                             </span>
                         </li>
@@ -135,28 +146,30 @@
                 </div>
             </div>
         </nav>
- <header class="masthead">
-    <div class="container">
-        <div class="masthead-heading text-uppercase">Your Home. Your Privacy.</div>
-        <div class="masthead-subheading">Military-Grade Security for Every Device in Your House.</div>
-        
-        <div class="d-inline-block p-3 mb-4 rounded shadow-lg" style="background: rgba(33, 37, 41, 0.85); border: 1px solid #0056b3;">
-            <div class="row align-items-center g-0">
-                <div class="col-auto px-3 border-end border-secondary">
-                    <span class="d-block text-white small text-uppercase fw-bold">Upfront Node</span>
-                    <span class="h4 text-primary mb-0">$399</span>
-                </div>
-                <div class="col-auto px-3">
-                    <span class="d-block text-white small text-uppercase fw-bold">Managed Service</span>
-                    <span class="h4 text-primary mb-0">$5<small class="fs-6">/mo</small></span>
-                </div>
-            </div>
-        </div>
 
-        <br>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Secure My Home</a>
-    </div>
-</header>
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">Your Home. Your Privacy.</div>
+                <div class="masthead-subheading">Military-Grade Security for Every Device in Your House.</div>
+                
+                <div class="d-inline-block p-3 mb-4 rounded shadow-lg" style="background: rgba(33, 37, 41, 0.85); border: 2px solid #0056b3;">
+                    <div class="row align-items-center g-0">
+                        <div class="col-auto px-4 border-end border-secondary">
+                            <span class="d-block text-white small text-uppercase fw-bold">Upfront Node</span>
+                            <span class="h3 text-primary mb-0">$399</span>
+                        </div>
+                        <div class="col-auto px-4">
+                            <span class="d-block text-white small text-uppercase fw-bold">Managed Service</span>
+                            <span class="h3 text-primary mb-0">$5<small class="fs-6">/mo</small></span>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Secure My Home</a>
+            </div>
+        </header>
+
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
@@ -170,7 +183,7 @@
                             <i class="fas fa-user-shield fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">IoT Isolation & Family Privacy</h4>
-                        <p class="text-muted">Smart cameras, TVs, and appliances are often the weakest links in your home. EncryptaGuard physically partitions your high-risk smart home devices from your personal computers and phones, stopping hackers from moving through your network to access your private data.</p>
+                        <p class="text-muted">Smart cameras, TVs, and appliances are often the weakest links in your home. EncryptaGuard physically partitions your high-risk smart home devices from your personal computers and phones.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -178,7 +191,7 @@
                             <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Streaming Speed & Ad Elimination</h4>
-                        <p class="text-muted">Stop letting 'invisible weight' slow down your family's streaming and gaming. By blocking thousands of data-hungry background trackers and ads at the gateway, your internet feels up to 3x faster. Reclaim your bandwidth for 4K streaming and lag-free gaming.</p>
+                        <p class="text-muted">Stop letting 'invisible weight' slow down your family's streaming and gaming. By blocking thousands of trackers and ads, your internet feels up to 3x faster.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -186,220 +199,116 @@
                             <i class="fas fa-house-lock fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Zero-Touch Security Updates</h4>
-                        <p class="text-muted">You shouldn't have to be an IT expert to keep your family safe. Our nodes are remotely managed 24/7 with 'Zero-Touch' automated security patches. We harden your network against emerging global threats in real-time, ensuring your home stays protected without you ever lifting a finger.</p>
+                        <p class="text-muted">You shouldn't have to be an IT expert. Our nodes are remotely managed 24/7 with 'Zero-Touch' automated security patches.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="page-section bg-light" id="portfolio">
+
+        <section class="page-section bg-light" id="faq">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">The Hardware</h2>
-                    <h3 class="section-subheading text-muted">Dedicated hardware. Physical protection.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">The Home Node</div>
-                                <div class="portfolio-caption-subheading text-muted">Secure Home Gateway Appliance</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Privacy Engine</div>
-                                <div class="portfolio-caption-subheading text-muted">Real-time Malware & Tracker Filtering</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">24/7 Managed Defense</div>
-                                <div class="portfolio-caption-subheading text-muted">Remote Health & Patch Management</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">The EncryptaGuard Mission</h2>
-                    <h3 class="section-subheading text-muted">Professional security, engineered for the family home.</h3>
-                </div>
-                <div class="row text-justify px-3">
-                    <p>
-                        In a world where families are targeted by identity thieves and ISPs sell your browsing habits, your standard router is your biggest vulnerability. <strong>EncryptaGuard</strong> provides a <strong>physical isolation model</strong> that blocks trackers and threats before they ever reach your children's tablets or your smart home devices. 
-                    </p>
-                    <p>
-                        Our architecture utilizes dedicated <strong>Protectli Vault hardware</strong> running a hardened security layer. By processing data on-premise, we eliminate the latency of cloud-only filters, delivering a browsing experience up to <strong>3x faster</strong> while ensuring your family's data never leaves the building.
-                    </p>
-                    <p>
-                        <strong>Transparency & Trust:</strong> EncryptaGuard is built on a foundation of open, industry-standard tools. We use outbound-only management tunnels to keep your internal network invisible to the public internet. No ports are ever opened on your home firewall, keeping your household private.
-                    </p>
-                </div>
-                
-                <div class="text-center mt-5">
-                    <p class="mb-4"><em>Architected by a U.S. Army Veteran with 15+ years of Network Defense experience.</em></p>
-                    <a class="btn btn-primary btn-xl text-uppercase" href="https://www.linkedin.com/in/tanner-sutherlin" target="_blank" style="background-color: #0077b5; border-color: #0077b5;">
-                        <i class="fab fa-linkedin"></i> Connect with Lead Engineer
-                    </a>
-                </div>
-            </div>
-        </section>
-<section class="page-section bg-light" id="faq">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Frequently Asked Questions</h2>
-            <h3 class="section-subheading text-muted">Everything you need to know about your secure home network.</h3>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion" id="faqAccordion">
-                    
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="hOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cOne" aria-expanded="false" aria-controls="cOne">
-                                What exactly is an EncryptaGuard Gateway?
-                            </button>
-                        </h2>
-                        <div id="cOne" class="accordion-collapse collapse" aria-labelledby="hOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                It is a managed privacy device that sits between your modem and your Wi-Fi router. It cleans your household's internet traffic of ads, trackers, and malware before they reach your devices.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="hTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cTwo" aria-expanded="false" aria-controls="cTwo">
-                                Is this the same as a Firewall?
-                            </button>
-                        </h2>
-                        <div id="cTwo" class="accordion-collapse collapse" aria-labelledby="hTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                While a firewall blocks "doors" into your house, EncryptaGuard provides <strong>Content Intelligence</strong>. We stop your devices from connecting to known malicious websites and privacy-invading trackers that standard firewalls ignore.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="hThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cThree" aria-expanded="false" aria-controls="cThree">
-                                Why is there a monthly fee after I buy the hardware?
-                            </button>
-                        </h2>
-                        <div id="cThree" class="accordion-collapse collapse" aria-labelledby="hThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Unlike a standard router, EncryptaGuard is a <strong>managed security service</strong>. Your $5 monthly subscription covers 24/7 remote health monitoring, automated "Zero-Touch" security patches, and real-time global threat feed updates. We handle the technical defense so you don't have to.
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section class="page-section bg-light" id="documentation">
-            <div class="container text-center">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Resource Center</h2>
-                    <h3 class="section-subheading text-muted">Technical briefs and privacy guides for the modern household.</h3>
+                    <h2 class="section-heading text-uppercase">Frequently Asked Questions</h2>
+                    <h3 class="section-subheading text-muted">Everything you need to know about your secure home network.</h3>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-5 mb-5 mb-md-0">
-                        <span class="fa-stack fa-4x mb-4">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-file-pdf fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Home Technical Specs</h4>
-                        <p class="text-muted">A deep dive into our on-premise hardware, speed optimization, and encryption logic.</p>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="EncryptaGuard_Whitepaper.pdf" target="_blank">
-                            <i class="fas fa-download me-2"></i> View Specs
-                        </a>
-                    </div>
-                    
-                    <div class="col-md-5">
-                        <span class="fa-stack fa-4x mb-4">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shield-halved fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Privacy Profile</h4>
-                        <p class="text-muted">A transparent reference of the trackers, malicious domains, and distraction categories we filter for families.</p>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="EncryptaGuard_Blocking_Profile.pdf" target="_blank">
-                            <i class="fas fa-download me-2"></i> View Profile
-                        </a>
-                    </div>
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                                        What exactly is an EncryptaGuard Gateway?
+                                    </button>
+                                </h2>
+                                <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        It is a managed privacy device that sits between your modem and your Wi-Fi router. It acts as a "filter" that cleans your household's internet traffic of ads, trackers, and malware before they reach your devices.
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="col-md-5 mt-md-5">
-                        <span class="fa-stack fa-4x mb-4">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-house-medical-shield fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">The Home Security Audit</h4>
-                        <p class="text-muted">Understand the common vulnerabilities in modern home networks and how we solve them.</p>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="Home_Safety_Audit.pdf" target="_blank">
-                            <i class="fas fa-download me-2"></i> View Audit
-                        </a>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                                        Is this the same as a Firewall?
+                                    </button>
+                                </h2>
+                                <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        While a firewall blocks "doors" into your house, EncryptaGuard provides <strong>Content Intelligence</strong>. We stop devices from connecting to malicious websites and trackers that firewalls ignore.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                                        Why is there a monthly fee after I buy the hardware?
+                                    </button>
+                                </h2>
+                                <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Unlike a standard router, EncryptaGuard is a <strong>managed security service</strong>. Your $5 monthly subscription covers 24/7 remote monitoring, automated patches, and real-time global threat updates.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
+                                        Why do I need this if my ISP includes security?
+                                    </button>
+                                </h2>
+                                <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Standard ISP routers often send your browsing data unencrypted, allowing them to track your habits. We use <strong>DNS-over-HTTPS (DoH)</strong> to wrap your traffic in a secure tunnel.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
+                                        Will this slow down my Wi-Fi?
+                                    </button>
+                                </h2>
+                                <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Actually, most homes find their internet feels <strong>faster</strong>. Because we block thousands of "invisible" ad requests, your devices don't waste bandwidth downloading junk data.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c6">
+                                        Can't my family members just use a VPN?
+                                    </button>
+                                </h2>
+                                <div id="c6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        A personal VPN protects one phone, but it doesn't protect your <strong>Smart TV, Doorbell, or Thermostat</strong>. EncryptaGuard protects every single device in your home.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="h7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c7">
+                                        Is it hard to set up?
+                                    </button>
+                                </h2>
+                                <div id="c7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Not for you. We use <strong>Zero-Touch Provisioning</strong>. We ship you a pre-configured node; you plug it in, and our automated systems handle the rest.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Secure Your Home</h2>
-                    <h3 class="section-subheading text-white">Ready to protect your family's digital life?</h3>
-                </div>
-                <form id="contactForm" action="https://formspree.io/f/xovgbndz" method="POST">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Your Name *" required="required" />
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" required="required" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" name="message" placeholder="Tell us about your home network needs... *" style="height: 12rem" required="required"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-primary btn-xl text-uppercase mb-4" id="submitButton" type="submit">Send Message</button>
-                        <br>
-                        <a class="btn btn-success btn-lg text-uppercase" href="https://calendar.app.google/bzr3PAdTKqcMuZ7w6" target="_blank" style="background-color: #28a745; border-color: #28a745;">
-                            <i class="fas fa-calendar-alt me-2"></i>Schedule Home Privacy Consultation
-                        </a>
-                    </div>
-                </form>
             </div>
         </section>
 
@@ -407,10 +316,6 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; EncryptaGuard LLC 2026</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="link-dark text-decoration-none me-3" href="assets/EncryptaGuard LLC_ Terms of Service.pdf" target="_blank">Terms of Service</a>
-                        <a class="link-dark text-decoration-none" href="#!">Privacy Policy</a>
-                    </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none" href="https://billing.stripe.com/p/login/9B69AS8qx8y07X9a4A2VG00" target="_blank">Billing Portal</a>
                     </div>
